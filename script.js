@@ -4,15 +4,16 @@ const authorText = document.getElementById('author');
 const twitterBtn = document.getElementById('twitter');
 const newQuoteBtn = document.getElementById('new-quote');
 const loader = document.getElementById('loader');
+const dt = document.getElementById('year');
 
 // Loading Spinner Shown
-function loading() {
+function showLoadingSpinner() {
   loader.hidden = false;
   quoteContainer.hidden = true;
 }
 
 // Remove Loading Spinner
-function complete() {
+function removeLoadingSpinner() {
   if (!loader.hidden) {
     quoteContainer.hidden = false;
     loader.hidden = true;
@@ -21,9 +22,9 @@ function complete() {
 
 // Get Quote From API
 async function getQuote() {
-  loading();
+  showLoadingSpinner();
   // We need to use a Proxy URL to make our API call in order to avoid a CORS error
-  const proxyUrl = "https://frozen-reef-89457.herokuapp.com/";
+  const proxyUrl = 'https://frozen-reef-89457.herokuapp.com/';
   const apiUrl = 'https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json';
   try {
     const response = await fetch(proxyUrl + apiUrl);
@@ -42,7 +43,7 @@ async function getQuote() {
     }
     quoteText.innerText = data.quoteText;
     // Stop Loading, Show Quote
-    complete();
+    removeLoadingSpinner();
   } catch (error) {
     getQuote();
     console.log("oops", error);
@@ -61,5 +62,12 @@ function tweetQuote() {
 newQuoteBtn.addEventListener('click', getQuote);
 twitterBtn.addEventListener('click', tweetQuote);
 
+// Get year for Footer
+function getDate () {
+  let d =  new Date();
+  dt.innerText = d.getFullYear();
+}
+
 // On Load
 getQuote();
+getDate ();

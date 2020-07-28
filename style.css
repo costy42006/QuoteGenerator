@@ -98,6 +98,22 @@ button:active {
   100% { transform: rotate(360deg); }
 }
 
+/* Footer Setup */
+footer{
+  display: flex;
+  min-width: 100vh;
+  position: fixed;
+  bottom: 0;
+  align-self: center;
+  align-content: center;
+  justify-content: center;
+}
+
+#footer-text {
+  margin: 2px;
+  font-weight: 900;
+}
+
 /* Media Query: Tablet or Smaller */
 @media screen and (max-width: 1000px) {
   .quote-container {
@@ -105,6 +121,22 @@ button:active {
   }
 
   .quote-text {
-    font-size: 2.5rem;
+    font-size: 1.2rem;
+  }
+
+  .quote-author {
+    font-size: 1.2rem;
+  }
+
+  #footer-text {
+    font-size: 0.6rem;
+  }
+
+  .fa-twitter {
+    font-size: 1.2rem;
+  }
+
+  #footer-logo-img {
+    width: 30px;
   }
 }
