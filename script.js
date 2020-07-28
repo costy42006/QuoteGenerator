@@ -2,6 +2,7 @@ const quoteContainer = document.getElementById('quote-container');
 const quoteText = document.getElementById('quote');
 const authorText = document.getElementById('author');
 const mailBtn = document.getElementById('mail');
+const wpBtn = document.getElementById('wp');
 const newQuoteBtn = document.getElementById('new-quote');
 const loader = document.getElementById('loader');
 const dt = document.getElementById('year');
@@ -64,9 +65,18 @@ function mailQuote() {
   window.open(emailIt);
 }
 
+// WhatsApp Quote
+function wpQuote() {
+  const quote = quoteText.innerText;
+  const author = authorText.innerText;
+  const wpUrl = `https://api.whatsapp.com/send?phone=+*YOURNUMBER*&text=${quote} - ${author}*`;
+  window.open(wpUrl);
+}
+
 // Event Listeners
 newQuoteBtn.addEventListener('click', getQuote);
 mailBtn.addEventListener('click', mailQuote);
+wpBtn.addEventListener('click', wpQuote);
 
 // Get year for Footer
 function getDate () {
