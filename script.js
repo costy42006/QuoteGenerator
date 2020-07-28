@@ -48,7 +48,7 @@ async function getQuote() {
     removeLoadingSpinner();
   } catch (error) {
     counter++;
-    if (counter < 10) {
+    if (counter < 20) {
       getQuote(); 
     } else {
       alert("Ooops, something gone wrong. Sorry about that. Please try again later.");
