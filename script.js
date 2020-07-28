@@ -1,7 +1,7 @@
 const quoteContainer = document.getElementById('quote-container');
 const quoteText = document.getElementById('quote');
 const authorText = document.getElementById('author');
-const twitterBtn = document.getElementById('twitter');
+const mailBtn = document.getElementById('mail');
 const newQuoteBtn = document.getElementById('new-quote');
 const loader = document.getElementById('loader');
 const dt = document.getElementById('year');
@@ -27,7 +27,6 @@ async function getQuote() {
   // We need to use a Proxy URL to make our API call in order to avoid a CORS error
   const proxyUrl = 'https://frozen-reef-89457.herokuapp.com/';
   const apiUrl = 'https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json';
- 
   try {
     const response = await fetch(proxyUrl + apiUrl);
     const data = await response.json();
@@ -56,17 +55,18 @@ async function getQuote() {
   }
 }
 
-// Tweet Quote
-function tweetQuote() {
+// Email Quote
+function mailQuote() {
   const quote = quoteText.innerText;
   const author = authorText.innerText;
-  const twitterUrl = `https://twitter.com/intent/tweet?text=${quote} - ${author}`;
-  window.open(twitterUrl, '_blank');
+  const mySite = "https://costy42006.github.io/QuoteGenerator/";
+  const emailIt = `mailto:name@email.com?subject=I found this nice quote on ${mySite}&body=${quote} - ${author}`;
+  window.open(emailIt);
 }
 
 // Event Listeners
 newQuoteBtn.addEventListener('click', getQuote);
-twitterBtn.addEventListener('click', tweetQuote);
+mailBtn.addEventListener('click', mailQuote);
 
 // Get year for Footer
 function getDate () {
