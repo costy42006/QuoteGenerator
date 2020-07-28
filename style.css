@@ -100,12 +100,15 @@ button:active {
 
 /* Footer Setup */
 footer{
-  display: flex;
   background-color: rgba(110, 164, 218, 0.2);
   min-width: 100vh;
   position: fixed;
   bottom: 0;
-  align-self: center;
+
+}
+
+.footer-logo {
+  display: flex;
   align-content: center;
   justify-content: center;
 }
@@ -150,12 +153,5 @@ footer{
 
   #new-quote {
     font-size: 0.7rem;
-  }
-}
-
-/* Media Query: Tablet or Smaller landscape*/
-@media only screen and (orientation: landscape) { 
-  #footer-logo-img {
-    display: none;
   }
 }
