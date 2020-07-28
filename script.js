@@ -21,11 +21,13 @@ function removeLoadingSpinner() {
 }
 
 // Get Quote From API
+let counter = 0;
 async function getQuote() {
   showLoadingSpinner();
   // We need to use a Proxy URL to make our API call in order to avoid a CORS error
   const proxyUrl = 'https://frozen-reef-89457.herokuapp.com/';
   const apiUrl = 'https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json';
+ 
   try {
     const response = await fetch(proxyUrl + apiUrl);
     const data = await response.json();
@@ -45,8 +47,12 @@ async function getQuote() {
     // Stop Loading, Show Quote
     removeLoadingSpinner();
   } catch (error) {
-    getQuote();
-    console.log("oops", error);
+    counter++;
+    if (counter < 10) {
+      getQuote(); 
+    } else {
+      alert("Ooops, something gone wrong. Sorry about that. Please try again later.");
+    } 
   }
 }
 
