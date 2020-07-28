@@ -69,7 +69,7 @@ function mailQuote() {
 function wpQuote() {
   const quote = quoteText.innerText;
   const author = authorText.innerText;
-  const wpUrl = `https://api.whatsapp.com/send?phone=+*YOURNUMBER*&text=${quote} - ${author}*`;
+  const wpUrl = `https://api.whatsapp.com/send?text=${quote} - ${author}*`;
   window.open(wpUrl);
 }
 
