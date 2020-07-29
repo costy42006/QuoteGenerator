@@ -51,6 +51,8 @@ body {
   color: #fff;
   font-size: 14pt !important;
   border-radius: 5px;
+  border: black 1px solid ;
+  box-shadow: 5px 5px 5px black;
 }
 
  /* Quote container */
