@@ -30,11 +30,7 @@ body {
  }
 
 .translated-ltr {
-  margin-top:-40px;
-}
-
-.translated-ltr {
-  margin-top:-40px;
+  margin-top:-10px;
 }
 
 .goog-te-banner-frame {
@@ -51,9 +47,10 @@ body {
 }
 
 .goog-te-combo {
-  background-color: rgba(70, 131, 156, 0.7);
+  background-color: rgba(70, 131, 156, 0.8);
   color: #fff;
   font-size: 14pt !important;
+  border-radius: 5px;
 }
 
  /* Quote container */
