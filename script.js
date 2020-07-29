@@ -78,6 +78,11 @@ function getDate () {
   dt.innerText = d.getFullYear();
 }
 
+// Translate the page with Google Translate
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+
 // On Load
 getQuote();
 getDate ();

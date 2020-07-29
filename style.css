@@ -20,6 +20,44 @@ body {
   justify-content: center;
 }
 
+/* Google Translate */
+.gTranslateContainer {
+  position: fixed;
+  top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  min-width: 150vh;
+ }
+
+.translated-ltr {
+  margin-top:-40px;
+}
+
+.translated-ltr {
+  margin-top:-40px;
+}
+
+.goog-te-banner-frame {
+  display: none;
+  margin-top:-20px;
+}
+
+.goog-logo-link {
+   display:none !important;
+} 
+
+.goog-te-gadget {
+   color: transparent !important;
+}
+
+.goog-te-combo {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+
+ /* Quote container */
+
 .quote-container {
   width: auto;
   max-width: 900px;
@@ -165,5 +203,9 @@ footer{
 
   #new-quote {
     font-size: 0.8rem;
+  }
+
+  .gTranslateContainer {
+    justify-content: center;
   }
 }
