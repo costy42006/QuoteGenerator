@@ -38,12 +38,12 @@ async function getQuote() {
       authorText.innerText = data.quoteAuthor;
     }
     // Dynamically reduce font size for long quotes
-    if (data.quoteText.length > 120) {
-      quoteText.classList.add('long-quote');
-    } else {
-      quoteText.classList.remove('long-quote');
-    }
-    quoteText.innerText = data.quoteText;
+    // if (data.quoteText.length > 50) {
+    //   quoteText.classList.add('long-quote');
+    // } else {
+    //   quoteText.classList.remove('long-quote');
+    // }
+    // quoteText.innerText = data.quoteText;
     // Stop Loading, Show Quote
     removeLoadingSpinner();
   } catch (error) {
