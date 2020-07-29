@@ -43,8 +43,9 @@ body {
 }
 
 .quote-author {
+  font-family: 'Merienda', cursive;
   margin-top: 15px;
-  font-size: 2rem;
+  font-size: 1.80rem;
   font-weight: 400;
   font-style: italic;
 }
@@ -69,7 +70,7 @@ button {
 }
 
 button:hover {
-  filter: brightness(110%);
+  filter: brightness(130%);
 }
 
 button:active {
@@ -120,7 +121,7 @@ footer{
   bottom: 0;
 }
 
-.footer-logo {
+.footer-logo-container {
   display: flex;
   align-content: center;
   justify-content: center;
@@ -163,7 +164,7 @@ footer{
   }
 
   #footer-logo-img {
-    width: 30px;
+    width: 25px;
   }
 
   #new-quote {
