@@ -38,13 +38,6 @@ async function getQuote() {
       authorText.innerText = data.quoteAuthor;
       quoteText.innerText = data.quoteText;
     }
-    // Dynamically reduce font size for long quotes
-    // if (data.quoteText.length > 50) {
-    //   quoteText.classList.add('long-quote');
-    // } else {
-    //   quoteText.classList.remove('long-quote');
-    // }
-    // quoteText.innerText = data.quoteText;
     // Stop Loading, Show Quote
     removeLoadingSpinner();
   } catch (error) {
