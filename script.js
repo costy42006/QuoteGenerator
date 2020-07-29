@@ -36,6 +36,7 @@ async function getQuote() {
       authorText.innerText = 'Unknown';
     } else {
       authorText.innerText = data.quoteAuthor;
+      quoteText.innerText = data.quoteText;
     }
     // Dynamically reduce font size for long quotes
     // if (data.quoteText.length > 50) {
