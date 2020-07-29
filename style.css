@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merienda&display=swap");
 
 html {
   box-sizing: border-box;
@@ -29,6 +30,7 @@ body {
 }
 
 .quote-text {
+  font-family: 'Merienda', cursive;
   font-size: 2.75rem;
 }
 
@@ -125,6 +127,7 @@ footer{
 }
 
 #footer-text {
+  font-family: Montserrat, sans-serif;
   margin: 5px;
   font-weight: 900;
   font-size: 1.2rem;
