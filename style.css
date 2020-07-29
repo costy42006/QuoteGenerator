@@ -23,19 +23,19 @@ body {
 /* Google Translate */
 .gTranslateContainer {
   position: fixed;
-  top: 10px;
+  top: 2px;
   display: flex;
   justify-content: flex-end;
   min-width: 150vh;
  }
 
 .translated-ltr {
-  margin-top:-10px;
+  margin-top: 0px;
 }
 
 .goog-te-banner-frame {
   display: none;
-  margin-top:-20px;
+  margin-top: 0px;
 }
 
 .goog-logo-link {
