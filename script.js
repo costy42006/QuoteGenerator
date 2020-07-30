@@ -8,13 +8,13 @@ const loader = document.getElementById('loader');
 const dt = document.getElementById('year');
 
 // Loading Spinner Shown
-function showLoadingSpinner() {
+const showLoadingSpinner = () => {
   loader.hidden = false;
   quoteContainer.hidden = true;
 }
 
 // Remove Loading Spinner
-function removeLoadingSpinner() {
+const removeLoadingSpinner = () => {
   if (!loader.hidden) {
     quoteContainer.hidden = false;
     loader.hidden = true;
@@ -23,7 +23,7 @@ function removeLoadingSpinner() {
 
 // Get Quote From API
 let counter = 0;
-async function getQuote() {
+const getQuote = async () => {
   showLoadingSpinner();
   // We need to use a Proxy URL to make our API call in order to avoid a CORS error
   const proxyUrl = 'https://frozen-reef-89457.herokuapp.com/';
@@ -51,7 +51,7 @@ async function getQuote() {
 }
 
 // Email Quote
-function mailQuote() {
+const mailQuote = () => {
   const quote = quoteText.innerText;
   const author = authorText.innerText;
   const mySite = "https://costy42006.github.io/QuoteGenerator/";
@@ -60,7 +60,7 @@ function mailQuote() {
 }
 
 // WhatsApp Quote
-function wpQuote() {
+ const wpQuote = () => {
   const quote = quoteText.innerText;
   const author = authorText.innerText;
   const wpUrl = `https://api.whatsapp.com/send?text=${quote} - ${author}`;
@@ -79,10 +79,9 @@ const getDate = () => {
 }
 
 // Translate the page with Google Translate
-function googleTranslateElementInit() {
+googleTranslateElementInit = () =>
   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-}
 
-// On Load
+  // On Load
 getQuote();
 getDate ();
