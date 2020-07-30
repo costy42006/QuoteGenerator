@@ -73,7 +73,7 @@ mailBtn.addEventListener('click', mailQuote);
 wpBtn.addEventListener('click', wpQuote);
 
 // Get year for Footer
-function getDate () {
+const getDate = () => {
   let d =  new Date();
   dt.innerText = d.getFullYear();
 }
