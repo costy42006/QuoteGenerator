@@ -34,6 +34,11 @@ const getQuote = async () => {
     // Check if Author field is blank and replace it with 'Unknown'
     if (data.quoteAuthor === '') {
       authorText.innerText = 'Unknown';
+    } else if (data.quoteText === '') {
+      quoteText.style.fontFamily = "cursive";
+      quoteText.style.fontWeight = "200"
+      quoteText.style.color = "red";
+      quoteText.innerText = 'Oops, something gone wrong. Please try new quote.';
     } else {
       authorText.innerText = data.quoteAuthor;
       quoteText.innerText = data.quoteText;
@@ -79,8 +84,7 @@ const getDate = () => {
 }
 
 // Translate the page with Google Translate
-googleTranslateElementInit = () =>
-  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+googleTranslateElementInit = () => new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
 
   // On Load
 getQuote();
