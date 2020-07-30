@@ -42,7 +42,7 @@ const getQuote = async () => {
     removeLoadingSpinner();
   } catch (error) {
     counter++;
-    if (counter < 50) {
+    if (counter < 30) {
       getQuote(); 
     } else {
       alert("Ooops, something gone wrong. Sorry about that. Please try again later.");
